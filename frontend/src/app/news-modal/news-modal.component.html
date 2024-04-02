@@ -1,0 +1,27 @@
+<div class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <div class="header">
+      <p>{{ data.source }}</p>
+      <p>{{ data.datetime }}</p>
+    </div>
+    <div class="body">
+      <h2>{{ data.headline }}</h2>
+      <p>Summary: {{ data.summary }}</p>
+      <p>For more details click here <a href="{{ data.url }}" target="_blank">Read more</a></p>
+    </div>
+    <div class="footer">
+      <!-- Twitter Share Button -->
+      <a class="twitter-share-button"
+        href="https://twitter.com/intent/tweet?url={{ data.url }}&text={{ data.headline }}" target="_blank">
+        Twitter
+      </a>
+      <!-- Facebook Share Button -->
+      <a class="facebook-share-button" href="https://www.facebook.com/sharer/sharer.php?u={{ data.url }}"
+        target="_blank">
+        Facebook
+      </a>
+    </div>
+  </div>
+</div>
+
